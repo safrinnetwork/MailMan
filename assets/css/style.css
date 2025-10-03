@@ -1,0 +1,369 @@
+:root {
+    --bg-dark: #1a1a1a;
+    --bg-darker: #121212;
+    --bg-light: #2d2d2d;
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --accent: #4a9eff;
+    --accent-hover: #3a8eef;
+    --success: #28a745;
+    --danger: #dc3545;
+    --warning: #ffc107;
+    --border: #404040;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-darker);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--bg-dark);
+    padding: 1rem 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.navbar-nav {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.nav-link {
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--text-primary);
+    background-color: var(--bg-light);
+}
+
+/* Cards */
+.card {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border);
+}
+
+/* Forms */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.form-control {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+textarea.form-control {
+    min-height: 150px;
+    resize: vertical;
+    font-family: 'Courier New', monospace;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.form-check-input {
+    width: 20px;
+    height: 20px;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.form-check-label {
+    color: var(--text-secondary);
+    cursor: pointer;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
+}
+
+.btn-success {
+    background-color: var(--success);
+    color: white;
+}
+
+.btn-danger {
+    background-color: var(--danger);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: var(--bg-light);
+    color: var(--text-primary);
+}
+
+.btn-sm {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+/* Table */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.table th {
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.table tr:hover {
+    background-color: var(--bg-light);
+}
+
+/* Alerts */
+.alert {
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.5rem;
+}
+
+.alert-success {
+    background-color: rgba(40, 167, 69, 0.2);
+    border: 1px solid var(--success);
+    color: var(--success);
+}
+
+.alert-danger {
+    background-color: rgba(220, 53, 69, 0.2);
+    border: 1px solid var(--danger);
+    color: var(--danger);
+}
+
+/* Login Page */
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--bg-dark);
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.login-header h1 {
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal.show {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--bg-dark);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    max-width: 800px;
+    width: 90%;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    padding: 1.5rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.close {
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.close:hover {
+    color: var(--text-primary);
+}
+
+/* File upload */
+.file-upload-label {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.file-upload-label:hover {
+    border-color: var(--accent);
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.file-list {
+    margin-top: 1rem;
+}
+
+.file-item {
+    background-color: var(--bg-light);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Utility */
+.text-center {
+    text-align: center;
+}
+
+.mt-3 {
+    margin-top: 1.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 1.5rem;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.gap-2 {
+    gap: 1rem;
+}
